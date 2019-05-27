@@ -23,7 +23,8 @@ app.get("/", function (req, res) {
 app.get("/api/info", function (req, res) {
   res.json({
     ip: ip.address(),
-    lang: req.headers["accept-language"]
+    lang: req.headers["accept-language"],
+    sys: req.headers["user-agent"]
   })
 });
 
